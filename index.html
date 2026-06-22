@@ -424,14 +424,16 @@
 
     <section class="booking section-dark" id="booking">
       <div class="booking-copy reveal"><div class="section-kicker light">25–26 июля · Чебаркуль</div><h2 class="display">Ваша новая история<br>может начаться<br><em>с простого «я еду»</em></h2><p>Оставьте заявку — мы свяжемся с вами, подтвердим наличие выбранного размещения и ответим на вопросы.</p></div>
-      <form class="booking-form glass reveal" name="aurum-booking" action="https://formspree.io/f/mqevkgvv" method="POST">
+      <div data-fs-success class="form-success" hidden>Спасибо! Ваша заявка отправлена. Организатор свяжется с вами в ближайшее время.</div>
+      <div data-fs-error class="form-error" hidden></div>
+      <form class="booking-form glass reveal" name="aurum-booking" id="booking-form">
         <input type="hidden" name="_subject" value="Новая заявка на Уик-энд с АУРУМ"><input type="hidden" name="_next" value="https://events-aurum.ru/thanks.html"><p class="hidden"><label>Не заполняйте: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
-        <label><span>Как вас зовут</span><input name="name" type="text" autocomplete="name" required placeholder="Имя"></label>
-        <label><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" required placeholder="+7 900 000-00-00"></label>
-        <label><span>Пакет</span><select name="package" id="package-select" required><option value="">Выберите пакет</option><option>Мини — 6 500 ₽</option><option>Одноместный — 9 999 ₽</option><option>Двухместный эконом — 11 999 ₽</option><option>Freedom — 12 999 ₽</option><option>Двухместный комфорт — 13 999 ₽</option></select></label>
-        <fieldset><legend>Как вы едете?</legend><label class="radio"><input type="radio" name="placement" value="Один, готов к подселению" required><span>Один, готов к подселению</span></label><label class="radio"><input type="radio" name="placement" value="Один, хочу отдельный номер"><span>Один, хочу отдельный номер</span></label><label class="radio"><input type="radio" name="placement" value="Бронирую на двоих"><span>Бронирую на двоих</span></label><label class="radio"><input type="radio" name="placement" value="Еду со своим участником"><span>Еду со своим участником</span></label></fieldset>
+        <label><span>Как вас зовут</span><input name="name" type="text" autocomplete="name" required placeholder="Имя" data-fs-field></label>
+        <label><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" required placeholder="+7 900 000-00-00" data-fs-field></label>
+        <label><span>Пакет</span><select name="package" id="package-select" required data-fs-field><option value="">Выберите пакет</option><option>Мини — 6 500 ₽</option><option>Одноместный — 9 999 ₽</option><option>Двухместный эконом — 11 999 ₽</option><option>Freedom — 12 999 ₽</option><option>Двухместный комфорт — 13 999 ₽</option></select></label>
+        <fieldset><legend>Как вы едете?</legend><label class="radio"><input type="radio" name="placement" data-fs-field value="Один, готов к подселению" required><span>Один, готов к подселению</span></label><label class="radio"><input type="radio" name="placement" data-fs-field value="Один, хочу отдельный номер"><span>Один, хочу отдельный номер</span></label><label class="radio"><input type="radio" name="placement" data-fs-field value="Бронирую на двоих"><span>Бронирую на двоих</span></label><label class="radio"><input type="radio" name="placement" data-fs-field value="Еду со своим участником"><span>Еду со своим участником</span></label></fieldset>
         <label class="consent"><input type="checkbox" required><span>Согласен(на) с <a href="privacy.html">политикой обработки данных</a></span></label>
-        <button class="btn btn-primary" type="submit">Оставить заявку <span>↗</span></button>
+        <button class="btn btn-primary" type="submit" data-fs-submit-btn>Оставить заявку <span>↗</span></button>
       </form>
     </section>
     <section class="final-chat-cta section" aria-label="Чат участников">
@@ -450,5 +452,10 @@
     <div class="footer-legal"><a href="privacy.html">Политика</a><a href="oferta.html">Оферта</a></div>
     <div class="footer-copyright">© 2026 Институт психологии и развития «АУРУМ». Все права защищены. Материалы сайта защищены от копирования.</div>
   </footer>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#booking-form', formId: 'mqevkgvv' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
