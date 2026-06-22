@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#035b49"/>
+      <stop offset="100%" stop-color="#0a2a25"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="80%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="10%" cy="75%" r="35%">
+      <stop offset="0%" stop-color="#e9ffb0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Decorative circle -->
+  <circle cx="980" cy="320" r="240" fill="none" stroke="rgba(233,255,176,0.12)" stroke-width="2"/>
+  <circle cx="980" cy="320" r="180" fill="none" stroke="rgba(233,255,176,0.08)" stroke-width="1"/>
+
+  <!-- Badge -->
+  <rect x="80" y="80" width="200" height="36" rx="18" fill="rgba(233,255,176,0.18)"/>
+  <text x="180" y="103" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e9ffb0" text-anchor="middle" letter-spacing="2">✦ АУРУМ ВЫХОДНЫЕ</text>
+
+  <!-- Main title -->
+  <text x="80" y="240" font-family="Georgia,serif" font-size="96" font-weight="700" fill="white" letter-spacing="-3">УИК-ЭНД</text>
+  <text x="80" y="340" font-family="Georgia,serif" font-size="96" font-style="italic" fill="#f5bedc" letter-spacing="-2">с АУРУМ</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="410" font-family="Arial,sans-serif" font-size="28" fill="rgba(255,255,255,0.75)">Психологический ретрит · Чебаркуль</text>
+
+  <!-- Date pill -->
+  <rect x="80" y="450" width="260" height="52" rx="26" fill="#e9ffb0"/>
+  <text x="210" y="483" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#035b49" text-anchor="middle">25–26 июля · Курорт Утёс</text>
+
+  <!-- URL -->
+  <text x="80" y="580" font-family="Arial,sans-serif" font-size="20" fill="rgba(255,255,255,0.45)" letter-spacing="1">aurumchel.ru</text>
+</svg>

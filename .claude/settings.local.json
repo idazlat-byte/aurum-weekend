@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(claude *)",
+      "PowerShell(Get-ChildItem -Recurse -Depth 3 | Where-Object { !$_.PSIsContainer } | Select-Object FullName)",
+      "PowerShell(findstr *)",
+      "PowerShell([System.IO.File]::ReadAllBytes\\(\"css\\\\style.css\"\\) | Select-Object -Last 100 | ForEach-Object { \"{0:X2}\" -f $_ } | Join-String -Separator \" \" | Select-String \"D0|D1|E2|80\" | Select-Object -First 5)",
+      "PowerShell($bytes = [System.IO.File]::ReadAllBytes\\(\"css\\\\style.css\"\\); $bytes[-50..-1] | ForEach-Object { \"{0:X2}\" -f $_ } | Out-String)",
+      "PowerShell($bytes = [System.IO.File]::ReadAllBytes\\(\"css\\\\style.css\"\\); $utf8 = [System.Text.Encoding]::UTF8.GetString\\($bytes\\); $lines = $utf8 -split \"`n\"; $lines[98..106] | ForEach-Object { $_ })",
+      "PowerShell(Select-String *)",
+      "PowerShell(Get-ChildItem -Recurse -File | Where-Object { $_.Length -gt 25MB } | Select-Object FullName, @{Name=\"MB\";Expression={[math]::Round\\($_.Length/1MB,2\\)}})",
+      "PowerShell(ffmpeg *)",
+      "PowerShell(Get-Item \"photos\\\\sup-boarding-optimized.jpg\" | Select-Object Name, @{Name=\"MB\";Expression={[math]::Round\\($_.Length/1MB,2\\)}})"
+    ]
+  }
+}
