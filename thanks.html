@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Спасибо — Уик-énд с АУРУМ</title>
+  <meta name="theme-color" content="#035b49">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="photos/logo-aurum.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="photos/aurum_logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+
+  <style>
+    .thanks-page {
+      min-height: 100svh;
+      background: var(--forest-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 20px 60px;
+    }
+
+    .thanks-card {
+      max-width: 560px;
+      width: 100%;
+      padding: 56px 48px;
+      border-radius: 20px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(18px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 30px 80px rgba(0,0,0,.32);
+    }
+
+    .thanks-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(221,176,108,.12);
+      border: 1px solid rgba(221,176,108,.4);
+      margin-bottom: 28px;
+    }
+
+    .thanks-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 500;
+      letter-spacing: -.03em;
+      line-height: 1.15;
+      margin: 0 0 20px;
+      color: #f0bf6b;
+      text-transform: none;
+    }
+
+    .thanks-text {
+      font-size: .95rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,.72);
+      margin: 0 0 36px;
+    }
+
+    .thanks-note {
+      margin-top: 24px;
+      font-size: .68rem;
+      color: rgba(255,255,255,.34);
+      letter-spacing: .06em;
+    }
+
+    @media (max-width: 500px) {
+      .thanks-card { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header scrolled" id="top">
+    <a class="brand brand-full" href="https://events-aurum.ru/" aria-label="Уик-énд с АУРУМ — на главную">
+      <img src="photos/aurum_logo.png" alt="Уик-énд с АУРУМ" width="154" height="50" decoding="async">
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="https://events-aurum.ru/#about">О событии</a>
+      <a href="https://events-aurum.ru/#program">Программа</a>
+      <a href="https://events-aurum.ru/#prices">Пакеты</a>
+      <a href="https://events-aurum.ru/#faq">Вопросы</a>
+    </nav>
+    <a class="header-cta" href="https://events-aurum.ru/#booking">Забронировать</a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <div class="thanks-page">
+      <div class="thanks-card">
+
+        <div class="thanks-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+               stroke="#DDB06C" stroke-width="2.2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+
+        <h1 class="thanks-title">Спасибо!<br>Заявка отправлена</h1>
+
+        <p class="thanks-text">Мы получили вашу заявку на уик-énд с АУРУМ&nbsp;25–26 июля. Организатор свяжется с вами в ближайшее время, подтвердит наличие места и расскажет об оплате.</p>
+
+        <a class="btn btn-primary" href="https://events-aurum.ru/">Вернуться на сайт <span>↗</span></a>
+
+        <p class="thanks-note">Уик-énд с АУРУМ&nbsp;&middot;&nbsp;курорт «Утёс»&nbsp;&middot;&nbsp;Чебаркуль</p>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
