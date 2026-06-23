@@ -15,3 +15,25 @@ if(sharingNote){const sharingObserver=new IntersectionObserver(entries=>entries.
 const karaoke=document.querySelector('.karaoke');
 if(karaoke){const words=[...karaoke.querySelectorAll('span')];const karaokeObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){words.forEach((word,index)=>setTimeout(()=>word.classList.add('lit'),index*140));karaokeObserver.disconnect()}}),{threshold:.45});karaokeObserver.observe(karaoke)}
 if(!reduceMotion){const heroMedia=document.querySelector('[data-parallax]');const glow=document.querySelector('.cursor-glow');const dot=document.querySelector('.cursor-dot');const scene=document.querySelector('.scene-3d');let ticking=false;window.addEventListener('scroll',()=>{if(scrollY<innerHeight*1.2)heroMedia.style.transform=`translate3d(0,${scrollY*.12}px,0) scale(1.02)`;if(sharingNote){const rect=sharingNote.getBoundingClientRect();const proximity=Math.max(0,1-Math.abs(rect.top+rect.height/2-innerHeight/2)/(innerHeight*.8));sharingNote.style.transform=`scale(${.96+proximity*.055})`}},{passive:true});window.addEventListener('pointermove',e=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{glow.style.opacity='1';glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px';if(scene&&scrollY<innerHeight){const rx=(e.clientY/innerHeight-.5)*-5;const ry=(e.clientX/innerWidth-.5)*8;scene.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`}ticking=false})},{passive:true});document.querySelectorAll('a,button,input,select,summary').forEach(el=>{el.addEventListener('mouseenter',()=>dot.classList.add('active'));el.addEventListener('mouseleave',()=>dot.classList.remove('active'))})}
+
+/* ===== Карусель экспертов: стрелки ===== */
+(function(){
+  var track = document.querySelector('.experts-track');
+  if(!track) return;
+  var prev = document.querySelector('.exp-prev');
+  var next = document.querySelector('.exp-next');
+  function step(){
+    var card = track.querySelector('.expert-card');
+    return card ? card.getBoundingClientRect().width + 24 : 344;
+  }
+  function update(){
+    if(!prev || !next) return;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+  }
+  if(prev) prev.addEventListener('click', function(){ track.scrollBy({left:-step(), behavior:'smooth'}); });
+  if(next) next.addEventListener('click', function(){ track.scrollBy({left: step(), behavior:'smooth'}); });
+  track.addEventListener('scroll', update);
+  window.addEventListener('resize', update);
+  update();
+})();
