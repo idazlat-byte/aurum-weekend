@@ -247,9 +247,11 @@ footer{grid-template-areas:"mark info info" "contacts contacts contacts" "legal 
 body.menu-open .vk-chat-btn{display:none}
 @media(max-width:700px){.vk-chat-btn{bottom:20px;right:16px;padding:12px 14px}.vk-btn-text{display:none}}
 @media(prefers-reduced-motion:reduce){.vk-chat-btn,.vk-chat-btn::before,.vk-chat-btn::after{animation:none!important}}
-.form-success,.form-error{border-radius:12px;padding:16px 20px;font-size:.88rem;line-height:1.6;margin-bottom:16px}
-.form-success{background:rgba(3,91,73,.12);border:1px solid rgba(3,91,73,.28);color:#035b49}
-.form-error{background:rgba(185,28,28,.08);border:1px solid rgba(185,28,28,.22);color:#7f1d1d}
+.form-success,.form-error{position:fixed;left:50%;right:auto;bottom:calc(18px + env(safe-area-inset-bottom));z-index:1200;display:none;width:min(560px,calc(100vw - 28px));margin:0;padding:16px 20px;border-radius:16px;font-size:.88rem;line-height:1.6;text-align:left;box-shadow:0 20px 70px rgba(0,0,0,.22);transform:translateX(-50%);backdrop-filter:blur(14px)}
+.form-success[data-fs-active],.form-error[data-fs-active],.form-success[hidden][data-fs-active],.form-error[hidden][data-fs-active]{display:block!important}
+.form-success{background:rgba(238,255,247,.96);border:1px solid rgba(3,91,73,.28);color:#035b49}
+.form-error{background:rgba(255,245,245,.96);border:1px solid rgba(185,28,28,.22);color:#7f1d1d}
+@media(max-width:700px){.form-success,.form-error{bottom:calc(14px + env(safe-area-inset-bottom));width:calc(100vw - 24px);padding:14px 16px;border-radius:14px;font-size:.82rem}}
 
 
 /* ===== Карусель экспертов ===== */
