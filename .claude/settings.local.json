@@ -12,7 +12,26 @@
       "PowerShell(ffmpeg *)",
       "PowerShell(Get-Item \"photos\\\\sup-boarding-optimized.jpg\" | Select-Object Name, @{Name=\"MB\";Expression={[math]::Round\\($_.Length/1MB,2\\)}})",
       "PowerShell(python -c \"import playwright\" 2>$null; if \\($?\\) { \"python playwright ok\" } else { \"no python playwright\" })",
-      "PowerShell(Get-Command *)"
+      "PowerShell(Get-Command *)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\\\\index.html\")",
+      "PowerShell(Start-Sleep -Seconds 3; Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $screen = [System.Windows.Forms.Screen]::PrimaryScreen; $bmp = New-Object System.Drawing.Bitmap\\($screen.Bounds.Width, $screen.Bounds.Height\\); $g = [System.Drawing.Graphics]::FromImage\\($bmp\\); $g.CopyFromScreen\\($screen.Bounds.Location, [System.Drawing.Point]::Empty, $screen.Bounds.Size\\); $path = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-admin-Documents-GitHub-aurum-weekend\\\\06b8a176-3abf-40d7-85c6-357ca216a509\\\\scratchpad\\\\screen1.png\"; $bmp.Save\\($path\\); $g.Dispose\\(\\); $bmp.Dispose\\(\\); Write-Output \"Saved: $path\")",
+      "PowerShell(Get-Process *)",
+      "PowerShell(node --version; npx playwright --version 2>$null)",
+      "PowerShell(\\(Get-Command npx\\).Source; npx --yes playwright@1.61.0 --version)",
+      "PowerShell($git = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.12\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; & $git add index.html; & $git commit -m \"Форма: обязательные имя и телефон, валидация телефона, email reply-to, тема письма\")",
+      "WebFetch(domain:gwfh.mranftl.com)",
+      "WebFetch(domain:fonts.googleapis.com)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\\\\fonts\" | Select-Object Name, @{n='KB';e={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "PowerShell(cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; Get-ChildItem \"fonts\" -File | Select-Object Name, @{N=\"KB\";E={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "PowerShell($git = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.12\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; & $git add fonts/ css/style.css index.html thanks.html; & $git commit -m \"Локальные шрифты вместо Google Fonts для загрузки в РФ без VPN\")",
+      "PowerShell(cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; Invoke-WebRequest -Uri \"https://unpkg.com/@formspree/ajax@1\" -OutFile \"js\\\\formspree-ajax.js\" -UseBasicParsing; $f = Get-Item \"js\\\\formspree-ajax.js\"; Write-Output \"Размер: $\\([math]::Round\\($f.Length/1KB,1\\)\\) KB\")",
+      "PowerShell(cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; Get-ChildItem \"js\" -File | Select-Object Name, @{N=\"KB\";E={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "PowerShell($git = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.12\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; & $git add js/formspree-ajax.js index.html; & $git commit -m \"Formspree: локальный скрипт вместо unpkg\")",
+      "PowerShell($git = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.12\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; & $git push)",
+      "PowerShell($git = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.12\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; & $git add yandex_5c5ba393552156e4.html css/style.css; & $git commit -m \"Яндекс.Вебмастер: файл подтверждения\"; & $git push)",
+      "PowerShell($git = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.12\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; & $git status --short)",
+      "PowerShell($git = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.12\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; & $git add index.html js/main.js oferta.html privacy.html sitemap.xml \"photos/Дарья.jpg\"; & $git commit -m \"SEO Яндекс, карусель экспертов, Дарья, иконки-звёздочки, файл подтверждения\"; & $git push)",
+      "PowerShell($git = \"C:\\\\Users\\\\admin\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.12\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; cd \"C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\aurum-weekend\"; & $git add index.html; & $git commit -m \"Программа 2-го дня: йога на природе отдельным пунктом, завтрак без йоги\"; & $git push)"
     ]
   }
 }
